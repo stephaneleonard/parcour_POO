@@ -34,5 +34,5 @@ $validator = new Validator();
 var_dump( $validator->string('stéphane'));
 var_dump($validator->string('1234'));
 var_dump( $validator->int(1));
-var_dump( $validator->int('abcd'));;
+var_dump( $validator->int('abcd'));
 var_dump( $validator->int('123'));
