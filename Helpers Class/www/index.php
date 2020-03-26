@@ -1,6 +1,7 @@
 <?php
 require_once('class/form.class.php');
 require_once('class/html.class.php');
+require_once('class/validator.class.php');
 
 //create html tags
 $html = new Html();
@@ -12,6 +13,7 @@ $html->title('POO');
 $html->css('style.css');
 $html->section('head', false);
 $html->section('body', true);
+//create a form
 $form = new Form();
 $form->create('index.php');
 $form->text('name', 'stéphane');
@@ -26,4 +28,11 @@ $html->a("google.com" , "google");
 $html->script('srcipt.js');
 $html->section('body', false);
 $html->end();
-//create a form
+
+//test validator
+$validator = new Validator();
+var_dump( $validator->string('stéphane'));
+var_dump($validator->string('1234'));
+var_dump( $validator->int(1));
+var_dump( $validator->int('abcd'));;
+var_dump( $validator->int('123'));
