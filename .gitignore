@@ -2,3 +2,5 @@
 /data/*
 /logs/*
 .DS_Store
+Helpers Class/data/mysql
+Helpers Class/logs
