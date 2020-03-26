@@ -2,6 +2,7 @@
 require_once('class/form.class.php');
 require_once('class/html.class.php');
 require_once('class/validator.class.php');
+require_once('class/car.class.php');
 
 //create html tags
 $html = new Html();
@@ -36,3 +37,13 @@ var_dump($validator->string('1234'));
 var_dump( $validator->int(1));
 var_dump( $validator->int('abcd'));
 var_dump( $validator->int('123'));
+
+echo '<br>';
+echo '<br>';
+//test car
+$AudiA3 = new  Car('Audi' , 'A3' , 'red' , 1 , 2012 , 100000 , 'BE-AZE-2DG');
+$AudiA3->display();
+$AudiA3->rouler();
+$AudiA3->display();
+$AudiA3->rouler();
+$AudiA3->display();
